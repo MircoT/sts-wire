@@ -1,0 +1,214 @@
+2020/12/15 18:58:43 DEBUG : rclone: Version "v1.51.0-DEV" starting with parameters [".test_instance/rclone" "--config" ".test_instance/rclone.conf" "--no-check-certificate" "mount" "--log-file" ".test_instance/rclone.log" "--log-level=DEBUG" "--vfs-cache-mode" "full" "--no-modtime" "test_instance:/test" "./test_local_mountpoint"]
+2020/12/15 18:58:43 DEBUG : Using config file from "/Volumes/Sam128/GitHub/sts-wire-fork/.test_instance/rclone.conf"
+2020/12/15 18:58:43 DEBUG : fs cache: renaming cache item "test_instance:/test" to be canonical "test_instance:test"
+2020/12/15 18:58:43 DEBUG : S3 bucket test: Mounting on "./test_local_mountpoint"
+2020/12/15 18:58:43 INFO  : S3 bucket test: poll-interval is not supported by this remote
+2020/12/15 18:58:43 DEBUG : vfs cache root is "/Users/mircotracolli/Library/Caches/rclone/vfs/test_instance/test"
+2020/12/15 18:58:43 DEBUG : Adding path "vfs/forget" to remote control registry
+2020/12/15 18:58:43 DEBUG : Adding path "vfs/refresh" to remote control registry
+2020/12/15 18:58:43 DEBUG : Adding path "vfs/poll-interval" to remote control registry
+2020/12/15 18:58:43 DEBUG : : Root: 
+2020/12/15 18:58:43 DEBUG : : >Root: node=/, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : /: Attr: 
+2020/12/15 18:58:43 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : : Statfs: 
+2020/12/15 18:58:43 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:43 DEBUG : /: Lookup: name=".hidden"
+2020/12/15 18:58:43 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:58:58 DEBUG : /: Attr: 
+2020/12/15 18:58:58 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:58:58 DEBUG : : Statfs: 
+2020/12/15 18:58:58 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:58 DEBUG : : Statfs: 
+2020/12/15 18:58:58 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:58:58 DEBUG : /: Lookup: name=".gitignore"
+2020/12/15 18:58:58 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:58:58 DEBUG : /: ReadDirAll: 
+2020/12/15 18:58:58 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 18:58:58 DEBUG : /: Lookup: name="Screen Shot 2020-12-14 at 09.13.45.png"
+2020/12/15 18:58:58 DEBUG : /: >Lookup: node=Screen Shot 2020-12-14 at 09.13.45.png, err=<nil>
+2020/12/15 18:58:58 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: Attr: 
+2020/12/15 18:58:58 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: >Attr: a=valid=1s ino=0 size=458033 mode=-rw-r--r--, err=<nil>
+2020/12/15 18:58:59 DEBUG : /: Attr: 
+2020/12/15 18:58:59 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:00 DEBUG : : Statfs: 
+2020/12/15 18:59:00 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:00 DEBUG : /: Lookup: name=".gitignore"
+2020/12/15 18:59:00 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:59:00 DEBUG : /: ReadDirAll: 
+2020/12/15 18:59:00 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 18:59:00 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: Attr: 
+2020/12/15 18:59:00 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: >Attr: a=valid=1s ino=0 size=458033 mode=-rw-r--r--, err=<nil>
+2020/12/15 18:59:01 DEBUG : /: Attr: 
+2020/12/15 18:59:01 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:02 DEBUG : /: ReadDirAll: 
+2020/12/15 18:59:02 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 18:59:02 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: Attr: 
+2020/12/15 18:59:02 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: >Attr: a=valid=1s ino=0 size=458033 mode=-rw-r--r--, err=<nil>
+2020/12/15 18:59:02 DEBUG : /: Attr: 
+2020/12/15 18:59:02 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:02 DEBUG : /: Attr: 
+2020/12/15 18:59:02 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:02 DEBUG : : Statfs: 
+2020/12/15 18:59:02 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:02 DEBUG : /: Lookup: name=".gitignore"
+2020/12/15 18:59:02 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:59:02 DEBUG : /: ReadDirAll: 
+2020/12/15 18:59:02 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 18:59:08 DEBUG : cache cleaner exiting
+2020/12/15 18:59:08 DEBUG : rclone: Version "v1.51.0-DEV" finishing with parameters [".test_instance/rclone" "--config" ".test_instance/rclone.conf" "--no-check-certificate" "mount" "--log-file" ".test_instance/rclone.log" "--log-level=DEBUG" "--vfs-cache-mode" "full" "--no-modtime" "test_instance:/test" "./test_local_mountpoint"]
+2020/12/15 18:59:46 DEBUG : rclone: Version "v1.51.0-DEV" starting with parameters [".test_instance/rclone" "--config" ".test_instance/rclone.conf" "--no-check-certificate" "mount" "--log-file" ".test_instance/rclone.log" "--log-level=DEBUG" "--vfs-cache-mode" "full" "--no-modtime" "test_instance:/test" "./test_local_mountpoint"]
+2020/12/15 18:59:46 DEBUG : Using config file from "/Volumes/Sam128/GitHub/sts-wire-fork/.test_instance/rclone.conf"
+2020/12/15 18:59:46 DEBUG : fs cache: renaming cache item "test_instance:/test" to be canonical "test_instance:test"
+2020/12/15 18:59:46 DEBUG : S3 bucket test: Mounting on "./test_local_mountpoint"
+2020/12/15 18:59:46 INFO  : S3 bucket test: poll-interval is not supported by this remote
+2020/12/15 18:59:46 DEBUG : vfs cache root is "/Users/mircotracolli/Library/Caches/rclone/vfs/test_instance/test"
+2020/12/15 18:59:46 DEBUG : Adding path "vfs/forget" to remote control registry
+2020/12/15 18:59:46 DEBUG : Adding path "vfs/refresh" to remote control registry
+2020/12/15 18:59:46 DEBUG : Adding path "vfs/poll-interval" to remote control registry
+2020/12/15 18:59:46 DEBUG : : Root: 
+2020/12/15 18:59:46 DEBUG : : >Root: node=/, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : /: Attr: 
+2020/12/15 18:59:46 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : : Statfs: 
+2020/12/15 18:59:46 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:46 DEBUG : /: Lookup: name=".hidden"
+2020/12/15 18:59:46 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:59:52 DEBUG : /: Attr: 
+2020/12/15 18:59:52 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:52 DEBUG : : Statfs: 
+2020/12/15 18:59:52 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:52 DEBUG : /: Lookup: name=".gitignore"
+2020/12/15 18:59:52 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:59:52 DEBUG : /: ReadDirAll: 
+2020/12/15 18:59:52 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 18:59:52 DEBUG : /: Lookup: name="Screen Shot 2020-12-14 at 09.13.45.png"
+2020/12/15 18:59:52 DEBUG : /: >Lookup: node=Screen Shot 2020-12-14 at 09.13.45.png, err=<nil>
+2020/12/15 18:59:52 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: Attr: 
+2020/12/15 18:59:52 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: >Attr: a=valid=1s ino=0 size=458033 mode=-rw-r--r--, err=<nil>
+2020/12/15 18:59:54 DEBUG : /: Attr: 
+2020/12/15 18:59:54 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:55 DEBUG : /: ReadDirAll: 
+2020/12/15 18:59:55 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 18:59:55 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: Attr: 
+2020/12/15 18:59:55 DEBUG : Screen Shot 2020-12-14 at 09.13.45.png: >Attr: a=valid=1s ino=0 size=458033 mode=-rw-r--r--, err=<nil>
+2020/12/15 18:59:55 DEBUG : /: Attr: 
+2020/12/15 18:59:55 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:55 DEBUG : /: Attr: 
+2020/12/15 18:59:55 DEBUG : /: >Attr: attr=valid=1s ino=0 size=0 mode=drwxr-xr-x, err=<nil>
+2020/12/15 18:59:55 DEBUG : : Statfs: 
+2020/12/15 18:59:55 DEBUG : : >Statfs: stat={Blocks:4294967295 Bfree:4294967295 Bavail:4294967295 Files:1000000000 Ffree:1000000000 Bsize:4096 Namelen:255 Frsize:4096}, err=<nil>
+2020/12/15 18:59:55 DEBUG : /: Lookup: name=".gitignore"
+2020/12/15 18:59:55 DEBUG : /: >Lookup: node=<nil>, err=no such file or directory
+2020/12/15 18:59:55 DEBUG : /: ReadDirAll: 
+2020/12/15 18:59:55 DEBUG : /: >ReadDirAll: item=1, err=<nil>
+2020/12/15 19:00:06 DEBUG : cache cleaner exiting
+2020/12/15 19:00:15 DEBUG : rclone: Version "v1.51.0-DEV" finishing with parameters [".test_instance/rclone" "--config" ".test_instance/rclone.conf" "--no-check-certificate" "mount" "--log-file" ".test_instance/rclone.log" "--log-level=DEBUG" "--vfs-cache-mode" "full" "--no-modtime" "test_instance:/test" "./test_local_mountpoint"]

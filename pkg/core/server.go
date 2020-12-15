@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -14,9 +13,12 @@ import (
 	"time"
 
 	iamTmpl "github.com/dciangot/sts-wire/pkg/template"
+	"github.com/gookit/color"
 	"github.com/minio/minio-go/v6/pkg/credentials"
 	"github.com/pkg/browser"
 	"golang.org/x/oauth2"
+
+	"github.com/rs/zerolog/log"
 )
 
 // RCloneStruct ..
@@ -107,7 +109,7 @@ func (s *Server) Start() error {
 
 			err = ioutil.WriteFile(".token", []byte(token), 0600)
 			if err != nil {
-				log.Println(fmt.Errorf("Could not save token file: %s", err))
+				log.Err(fmt.Errorf("Could not save token file: %s", err)).Msg("server")
 				http.Error(w, err.Error(), http.StatusBadRequest)
 				return
 			}
@@ -124,14 +126,14 @@ func (s *Server) Start() error {
 
 			sts := credentials.NewChainCredentials(providers)
 			if err != nil {
-				log.Println(fmt.Errorf("Could not set STS credentials: %s", err))
+				log.Err(fmt.Errorf("Could not set STS credentials: %s", err)).Msg("server")
 				http.Error(w, err.Error(), http.StatusBadRequest)
 				return
 			}
 
 			creds, err := sts.Get()
 			if err != nil {
-				log.Println(fmt.Errorf("Could not get STS credentials: %s", err))
+				log.Err(fmt.Errorf("Could not get STS credentials: %s", err)).Msg("server")
 				http.Error(w, err.Error(), http.StatusBadRequest)
 				return
 			}
@@ -155,13 +157,20 @@ func (s *Server) Start() error {
 
 		address := fmt.Sprintf("localhost:3128")
 		urlBrowse := fmt.Sprintf("http://%s/", address)
-		log.Printf("listening on http://%s/", address)
+
+		log.Info().Str("IAM auth URL", urlBrowse).Msg("Server")
+
 		err := browser.OpenURL(urlBrowse)
 		if err != nil {
-			log.Println("Failed to open browser, trying to copy the following on you browser.")
-			log.Println(config.AuthCodeURL(state))
-			log.Println("After that copy the resulting address and run the following command on a separate shell: ")
-			log.Println("curl \"<your resulting address e.g. http://localhost:3128/oauth2/callback?code=1tpAd&state=9RpeJxIf>\" ")
+			log.Err(err).Msg("Failed to open browser, trying to copy the following on you browser")
+			log.Info().Msg(config.AuthCodeURL(state))
+			log.Info().Msg("After that copy the resulting address and run the following command on a separate shell")
+			log.Info().Msg("curl \"<your resulting address e.g. http://localhost:3128/oauth2/callback?code=1tpAd&state=9RpeJxIf>\" ")
+
+			color.Red.Println("!!! Failed to open browser, trying to copy the following on you browser")
+			fmt.Printf("==> %s\n", config.AuthCodeURL(state))
+			color.Yellow.Println("=> After that copy the resulting address and run the following command on a separate shell")
+			color.Yellow.Println("-> curl \"<your resulting address e.g. http://localhost:3128/oauth2/callback?code=1tpAd&state=9RpeJxIf>\"")
 		}
 
 		srv := &http.Server{Addr: address}
@@ -173,14 +182,14 @@ func (s *Server) Start() error {
 			// We received an interrupt signal, shut down.
 			if err := srv.Shutdown(context.Background()); err != nil {
 				// Error from closing listeners, or context timeout:
-				log.Printf("HTTP server Shutdown: %v", err)
+				log.Err(err).Msg("server")
 			}
 			close(idleConnsClosed)
 		}()
 
 		if err := srv.ListenAndServe(); err != http.ErrServerClosed {
 			// Error starting or closing listener:
-			log.Fatalf("HTTP server ListenAndServe: %v", err)
+			log.Err(err).Msg("server")
 		}
 
 		<-idleConnsClosed
@@ -195,7 +204,7 @@ func (s *Server) Start() error {
 		fmt.Printf("Writing down token: %s", token)
 		err := ioutil.WriteFile(".token", []byte(token), 0600)
 		if err != nil {
-			log.Println(fmt.Errorf("Could not save token file: %s", err))
+			log.Err(fmt.Errorf("Could not save token file: %s", err)).Msg("server")
 			panic(err)
 		}
 		//fmt.Println(token)
@@ -211,13 +220,13 @@ func (s *Server) Start() error {
 
 		sts := credentials.NewChainCredentials(providers)
 		if err != nil {
-			log.Println(fmt.Errorf("Could not set STS credentials: %s", err))
+			log.Err(fmt.Errorf("Could not set STS credentials: %s", err)).Msg("server")
 			panic(err)
 		}
 
 		creds, err := sts.Get()
 		if err != nil {
-			log.Println(fmt.Errorf("Could not get STS credentials: %s", err))
+			log.Err(fmt.Errorf("Could not get STS credentials: %s", err)).Msg("server")
 			panic(err)
 		}
 
@@ -227,6 +236,7 @@ func (s *Server) Start() error {
 		response["credentials"] = creds
 		_, err = json.MarshalIndent(response, "", "\t")
 		if err != nil {
+			log.Err(err).Msg("server")
 			panic(err)
 		}
 
@@ -260,7 +270,8 @@ func (s *Server) Start() error {
 
 	MountVolume(s.Instance, s.RemotePath, s.LocalPath, s.Client.ConfDir)
 
-	fmt.Printf("Volume mounted on %s", s.LocalPath)
+	log.Info().Str("Mounted on", s.LocalPath).Msg("Server")
+	color.Green.Printf("==> Volume mounted on %s", s.LocalPath)
 
 	// // TODO: start routine to keep token valid!
 	// cntxt := &daemon.Context{

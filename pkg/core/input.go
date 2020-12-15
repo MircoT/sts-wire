@@ -2,24 +2,40 @@ package core
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"strings"
 	"syscall"
 
 	"golang.org/x/crypto/ssh/terminal"
+
+	"github.com/gookit/color"
+	"github.com/rs/zerolog/log"
 )
 
 type GetInputWrapper struct {
 	Scanner bufio.Reader
 }
 
-func (t *GetInputWrapper) GetPassword(question string) (password string, err error) {
-	fmt.Print(question + "\n")
+var (
+	errPasswordMismatch = errors.New("The two password inserted are not the same.")
+)
+
+func (t *GetInputWrapper) GetPassword(question string, only4Decription bool) (password string, err error) {
+	fmt.Print(question)
 	bytePassword, err := terminal.ReadPassword(int(syscall.Stdin))
 	if err != nil {
 		return "", err
 	}
-	fmt.Print("Please re-insert the same now:\n")
+
+	if only4Decription {
+		return string(bytePassword), nil
+	}
+
+	fmt.Println()
+	passMsg := fmt.Sprintf("%s Please, insert the password again: ", color.Yellow.Sprint("==>"))
+	fmt.Print(passMsg)
+
 	bytePassword2, err := terminal.ReadPassword(int(syscall.Stdin))
 	if err != nil {
 		return "", err
@@ -27,7 +43,9 @@ func (t *GetInputWrapper) GetPassword(question string) (password string, err err
 	if string(bytePassword) == string(bytePassword2) {
 		return string(bytePassword), nil
 	}
-	return "", fmt.Errorf("The two passwords does not look the same.")
+
+	log.Err(errPasswordMismatch).Msg("GetPassword")
+	return "", errPasswordMismatch
 }
 
 func (t *GetInputWrapper) GetInputString(question string, def string) (text string, err error) {

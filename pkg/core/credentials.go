@@ -9,6 +9,10 @@ import (
 	"os"
 	"strings"
 	"text/template"
+
+	"github.com/rs/zerolog/log"
+
+	"github.com/gookit/color"
 )
 
 type InitClientConfig struct {
@@ -54,13 +58,16 @@ func (t *InitClientConfig) InitClient(instance string) (endpoint string, clientR
 				panic(err)
 			}
 		} else if t.IAMServer != "" {
-			fmt.Println("getting endpoint from config: ", t.IAMServer)
+			log.Info().Str("IAM endpoint used", t.IAMServer).Msg("Credentials")
+			color.Green.Printf("==> IAM endpoint used: %s", t.IAMServer)
 			endpoint = t.IAMServer
 		}
 
 		register := endpoint + "/register"
 
-		fmt.Println(register)
+		log.Info().Str("IAM register url", register).Msg("Credentials")
+		color.Green.Printf("==> IAM register url: %s", register)
+
 		r, err := t.HTTPClient.Post(register, contentType, strings.NewReader(request))
 		if err != nil {
 			panic(err)
@@ -87,7 +94,9 @@ func (t *InitClientConfig) InitClient(instance string) (endpoint string, clientR
 
 			if os.Getenv("REFRESH_TOKEN") == "" {
 
-				passwd, err = t.Scanner.GetPassword("Insert pasword for secrets encryption: ")
+				passMsg := fmt.Sprintf("\n%s Insert a pasword for the secret's encryption: ", color.Yellow.Sprint("==>"))
+				passwd, err = t.Scanner.GetPassword(passMsg, false)
+
 				if err != nil {
 					panic(err)
 				}
@@ -107,7 +116,9 @@ func (t *InitClientConfig) InitClient(instance string) (endpoint string, clientR
 			passwd := ""
 
 			if os.Getenv("REFRESH_TOKEN") == "" {
-				passwd, err = t.Scanner.GetPassword("Insert pasword for secrets decryption: ")
+				passMsg := fmt.Sprintf("\n%s Insert a pasword for the secret's decryption: ", color.Yellow.Sprint("==>"))
+				passwd, err = t.Scanner.GetPassword(passMsg, true)
+
 				if err != nil {
 					panic(err)
 				}
