@@ -9,10 +9,15 @@ import (
 
 	"github.com/dciangot/sts-wire/pkg/core"
 	iamTemplate "github.com/dciangot/sts-wire/pkg/template"
+	"github.com/dciangot/sts-wire/pkg/validator"
 	_ "github.com/go-bindata/go-bindata"
 )
 
 func main() {
+
+	var (
+		localMountPath string
+	)
 
 	inputReader := *bufio.NewReader(os.Stdin)
 	scanner := core.GetInputWrapper{
@@ -41,7 +46,12 @@ func main() {
 
 	remote := os.Args[3]
 
-	local := os.Args[4]
+	if validLocalPath, err := validator.LocalPath(os.Args[4]); validLocalPath {
+		localMountPath = os.Args[4]
+	} else {
+		panic(err)
+	}
+
 	//fmt.Println(instance)
 
 	// if instance == "" {
@@ -116,7 +126,7 @@ func main() {
 		Instance:   instance,
 		S3Endpoint: s3Endpoint,
 		RemotePath: remote,
-		LocalPath:  local,
+		LocalPath:  localMountPath,
 		Endpoint:   endpoint,
 		Response:   clientResponse,
 	}
@@ -126,7 +136,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("Server started and volume mounted in %s", local)
+	fmt.Printf("Server started and volume mounted in %s", localMountPath)
 	fmt.Printf("To unmount you can see you PID in mount.pid file and kill it.")
 
 }
